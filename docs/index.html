@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>
+    Amherst Painting Company
+  </title>
+
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'>
+  <link href="../dist/toolkit-startup.css" rel="stylesheet">
+  <link href="assets/css/application-startup.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+
+  <style>
+    /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+    /* this chunk of css is not part of the toolkit :) */
+    /* …curses ios, etc… */
+
+    @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+      body {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+      }
+      #stage {
+        height: 1px;
+        overflow: auto;
+        min-height: 100vh;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stage-shelf stage-shelf-right hidden" id="sidebar">
+    <ul class="nav nav-bordered nav-stacked">
+    <li class="nav-header">Pages</li>
+    <li class="active">
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="services/interior-painting.html">Interior Painting</a>
+    </li>
+    <li>
+      <a href="services/exterior-painting.html">Exterior Painting</a>
+    </li>
+    <li class="nav-divider"></li>
+    <li class="nav-header">Contact</li>
+    <li>
+      <a href="tel:1-603-673-6469"><span class="icon icon-phone text-muted"> (603) 673-6469</span></a>
+    </li>
+    <li>
+      <a href="mailto:info@amherstpaint.com"><span class="icon icon-mail text-muted"> info@amherstpaint.com</span></a>
+    </li>
+  </ul>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="block block-inverse block-fill-height app-header" style="
+      background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/img/shakes-blured.png);
+      background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/img/shakes-blured.png);
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/img/shakes-blured.png);
+      background-size: cover;
+      ">
+      <nav class="navbar navbar-transparent navbar-fixed-top navbar-padded app-navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed p-x-0" style="padding-top: 45px" data-target="#stage" data-toggle="stage" data-distance="-250">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="width: 250px">
+              <div>
+                <img src="assets/img/logo.png" style="width: 100%" alt="Amherst Painting Company">
+              </div>
+            </a>
+          </div>
+          <div class="navbar-collapse collapse text-uppercase" style="padding-top: 45px">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="services/interior-painting.html">Interior</a>
+              </li>
+              <li>
+                <a href="services/exterior-painting.html">Exterior</a>
+              </li>
+            </ul>
+          <form class="form-inline navbar-form navbar-right hidden-xs">
+            <a href="tel:1-603-673-6469"><span class="icon icon-phone text-muted"> (603) 673-6469</span></a>
+          </form>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+      </nav>
+
+      <div class="block-xs-middle p-b">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-10 col-md-8">
+              <h1 class="block-title m-b-sm">Southern New Hampshires #1 Painting Contractor</h1>
+              <p class="lead m-b-md text-muted">We have proudly been Southern New Hampshires best painting contractor for over 21 years because we believe quality <em>really does</em> matter.</p>
+              <button class="btn btn-success btn-block btn-lg p-y" data-toggle="modal" data-target="#quoteModal">Get Your Free Quote</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row text-center">
+
+      <div class="col-sm-6 p-x-0">
+        <div class="block block-inverse exterior-gallery">
+          <div  data-transition="entrance" style="transform: translateY(15px)">
+            <h1 class="block-title">Exterior Painting Gallery</h1>
+            <h4 class="text-muted">A small collection of our exterior craftsmanship</h4>
+            <a class="btn btn-warning hvr-grow m-t" href="services/exterior-painting.html#exterior-gallery">View Our Work</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 p-x-0">
+        <div class="block block-inverse interior-gallery text-center">
+          <div  data-transition="entrance" style="transform: translateY(15px)">
+            <h1 class="block-title">Interior Painting Gallery</h1>
+            <h4 class="text-muted">A small collection of our interior craftsmanship</h4>
+            <a class="btn btn-warning hvr-grow m-t" href="services/interior-painting.html#interior-gallery">View Our Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  Stats -->
+    <div class="row text-center bg-primary">
+      <div class="container">
+        <div class="col-sm-4 p-a">
+          <div class="statcard">
+            <h3 class="statcard-number text-white">Residential</h3>
+            <span class="statcard-desc text-white">Interior &middot; Exterior</span>
+          </div>
+        </div>
+        <div class="col-sm-4 p-a">
+          <div class="statcard">
+            <h3 class="statcard-number text-white">Commerical</h3>
+            <span class="statcard-desc text-white">Interior &middot; Exterior</span>
+          </div>
+        </div>
+        <div class="col-sm-4 p-a">
+          <div class="statcard">
+            <h3 class="statcard-number text-white">Industrial</h3>
+            <span class="statcard-desc text-white">Interior &middot; Exterior</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Testimonials -->
+<div class="row p-x-0 p-t-0" style="min-height: 500px">
+  <div id="carousel-example-generic-2" class="carousel carousel-light slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic-2" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic-2" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic-2" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="block">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <p class="lead m-x-auto text-center">
+                  Thank you for the professional and prompt completion in painting our corporate offices. I have enclosed a check for the balance. Thanks again for a job so well done!
+                </p>
+                <p class="lead m-x-auto text-muted text-center">
+                  Debra S. – Nashua, NH
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="block">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <p class="lead m-x-auto text-center">
+                  Thanks so much. You were efficient and quick. We love the job and the colors. I will be recommending you to people I know if they need painting done. Please don’t hesitate to contact us as a reference. Hoping to have you do the outside in early fall! Thanks again!
+                </p>
+                <p class="lead m-x-auto text-muted text-center">
+                   Liane W. – Milford, NH
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="block">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <p class="lead m-x-auto text-center">
+                  Both my wife and I are very please with the end results of the exterior painting. Thanks for everything – best of luck
+                </p>
+                <p class="lead m-x-auto text-muted text-center">
+                  Doug R. – Bedford, NH
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
+      <span class="icon icon-chevron-thin-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
+      <span class="icon icon-chevron-thin-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+</div>
+
+
+    <!-- Why Us  -->
+    <div class="block block-inverse whyus p-y-lg">
+      <div class="container">
+        <div class="text-center">
+          <h6 class="text-muted text-uppercase">Why Us</h6>
+          <h2 class="m-t-0">Trained. Tested. Certified. Painting Professionals</h2>
+        </div>
+        <div class="col-sm-6">
+          <ul class="featured-list">
+            <li class="m-b-md">
+              <div class="featured-list-icon">
+                <span class="icon icon-check"></span>
+              </div>
+
+              <h3>EPA LEAD Certified</h3>
+              <p>
+                Use dropbox to save things in the "cloud" because throwing things away is stressful and this way you don't have to.
+              </p>
+            </li>
+
+            <li class="m-b-md">
+              <div class="featured-list-icon">
+                <span class="icon icon-check"></span>
+              </div>
+
+              <h3>A+ BBB business</h3>
+              <p>
+                Use dropbox to save things in the "cloud" because throwing things away is stressful and this way you don't have to.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <ul class="featured-list">
+            <li class="m-b-md">
+              <div class="featured-list-icon">
+                <span class="icon icon-check"></span>
+              </div>
+
+              <h3>Fully Insured</h3>
+              <p>
+                Use Medium to write things down and sound smart. Also when you write, your writings looks pretty and that is cool.
+              </p>
+            </li>
+
+            <li class="m-b-md">
+              <div class="featured-list-icon">
+                <span class="icon icon-check"></span>
+              </div>
+
+              <h3>Benjamin Moore Certified Stain Specialist</h3>
+              <p>
+                Use Medium to write things down and sound smart. Also when you write, your writings looks pretty and that is cool.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#quoteModal">Get Your Free Quote</button>
+      </div>
+    </div>
+
+    <!--  Stats -->
+    <div class="block text-center p-y-lg stats">
+      <div class="">
+        <h6 class="text-muted text-uppercase">Quick Stats</h6>
+        <h2 class="m-t-0">Proof in Numbers</h2>
+      </div>
+      <div class="container">
+        <div class="col-sm-4 p-a">
+          <div class="statcard" data-transition="entrance" style="transform: translateY(15px)">
+            <h3 class="statcard-number">21</h3>
+            <span class="statcard-desc">Years in Business</span>
+          </div>
+        </div>
+        <div class="col-sm-4 p-a">
+          <div class="statcard" data-transition="entrance" style="transform: translateY(15px)">
+            <h3 class="statcard-number">2,263</h3>
+            <span class="statcard-desc">Interior Projects</span>
+          </div>
+        </div>
+        <div class="col-sm-4 p-a">
+          <div class="statcard" data-transition="entrance" style="transform: translateY(15px)">
+            <h3 class="statcard-number">2,731</h3>
+            <span class="statcard-desc">Exterior Projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  Where we go -->
+    <div class="block">
+      <div class="container">
+        <div class="p-b text-center">
+          <h6 class="text-muted text-uppercase">Our Customers</h6>
+          <h2 class="m-t-0">Where We Work</h2>
+        </div>
+        <div class="col-sm-3">
+          <ul class="iconlist" data-transition="entrance" style="transform: translateY(15px)">
+            <li>
+              <span class="icon icon-check"></span> Amherst, NH
+            </li>
+            <li>
+              <span class="icon icon-check"></span> Bedford, NH
+            </li>
+            <li>
+              <span class="icon icon-check"></span> Hollis, NH
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <ul class="iconlist" data-transition="entrance" style="transform: translateY(15px)">
+            <li>
+              <span class="icon icon-check"></span> Milford, NH
+            </li>
+            <li>
+              <span class="icon icon-check"></span> Mont Vernon, NH
+            </li>
+            <li>
+              <span class="icon icon-check"></span> Merrimack, NH
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <ul class="iconlist" data-transition="entrance" style="transform: translateY(15px)">
+            <li>
+              <span class="icon icon-check"></span> Manchester, NH
+            </li>
+            <li>
+              <span class="icon icon-check"></span> Wilton, NH
+            </li>
+            <li>
+              <span class="icon icon-check"></span> Brookline, NH
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <ul class="iconlist" data-transition="entrance" style="transform: translateY(15px)">
+            <li>
+              <span class="icon icon-check"></span> New Boston, NH
+            </li>
+            <li>
+              <span class="icon icon-check"></span> Goffstown, NH
+            </li>
+            <li>
+              <span class="icon icon-check"></span> Lyndeborough, NH
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<div class="block block-inverse app-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 m-b-md">
+        <ul class="list-unstyled list-spaced">
+          <li class="m-b">
+            <h6 class="text-uppercase">About</h6></li>
+          <li>
+            We have been painting residential and commerical real estate for over 21 year. We love making your house feel like home and your business look as polished as it truely is.
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-3 col-sm-offset-1 m-b-md">
+        <ul class="list-unstyled list-spaced">
+          <li class="m-b">
+            <h6 class="text-uppercase">Contact</h6></li>
+          <li>
+            <a href="tel:1-603-673-6469">(603) 673-6469</a>
+          </li>
+          <li>Mon - Fri: 8am - 6pm</li>
+          <li>Sat - Sun: 11am - 5pm </li>
+          <li>
+            <a href="mailto:info@amherstpaint.com">info@amherstpaint.com</a>  
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-2 col-sm-offset-1 m-b-md">
+        <ul class="list-unstyled list-spaced">
+          <li class="m-b">
+            <h6 class="text-uppercase">Serivces</h6></li>
+          <li>
+            <a href="services/interior-painting.html">Interior Painting</a>
+          </li>
+          <li>
+            <a href="services/exterior-painting.html">Exterior Painting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn btn-info-outline close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">cancel</span></button>
+        <!-- <button type="button" class="btn btn-default pull-right" data-dismiss="modal">I'll Wait</button> -->
+        <h2 class="modal-title text-center" id="myModalLabel">Get Started on Your Free Quote</h2>
+      </div>
+      <div class="modal-body">
+        <form  name="quoteform" method="post" action="send-quote-form.php">
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control input-lg" name="name" placeholder="John Williamson">
+          </fieldset>
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control input-lg" name="phone" placeholder="(603) 673-6469">
+          </fieldset>
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="email">Email address</label>
+            <input type="email" class="form-control input-lg" name="email" placeholder="you@email.com">
+            <small class="text-muted">We'll never share your email with anyone else.</small>
+          </fieldset>
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control input-lg" name="subject" placeholder="Kitchen Cabinetry Refinshing">
+          </fieldset>
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="message">Your Message</label>
+            <textarea class="form-control input-lg" name="message" rows="5"></textarea>
+          </fieldset>
+          <input type="submit" value="Send" class="btn btn-primary btn-block btn-lg">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn btn-info-outline close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">cancel</span></button>
+        <!-- <button type="button" class="btn btn-default pull-right" data-dismiss="modal">I'll Wait</button> -->
+        <h2 class="modal-title text-center" id="myModalLabel">Get Started on Your Free Quote</h2>
+      </div>
+      <div class="modal-body">
+        <form  name="quoteform" method="post" action="send-quote-form.php">
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control input-lg" name="name" placeholder="John Williamson">
+          </fieldset>
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control input-lg" name="phone" placeholder="(603) 673-6469">
+          </fieldset>
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="email">Email address</label>
+            <input type="email" class="form-control input-lg" name="email" placeholder="you@email.com">
+            <small class="text-muted">We'll never share your email with anyone else.</small>
+          </fieldset>
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control input-lg" name="subject" placeholder="Kitchen Cabinetry Refinshing">
+          </fieldset>
+          <fieldset class="form-group">
+            <span class="pull-right text-muted small">required</span>
+            <label for="message">Your Message</label>
+            <textarea class="form-control input-lg" name="message" rows="5"></textarea>
+          </fieldset>
+          <input type="submit" value="Send" class="btn btn-primary btn-block btn-lg">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <!-- stage -->
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/toolkit.js"></script>
+  <script src="assets/js/application.js"></script>
+</body>
+
+</html>

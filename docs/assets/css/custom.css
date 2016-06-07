@@ -1,0 +1,77 @@
+.interior-gallery{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ), url(../img/interior-main.jpg);
+  background-size: cover;
+  min-height: 450px;
+}
+
+.exterior-gallery{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ), url(../img/exterior-main.jpg);
+  background-size: cover;
+  min-height: 450px;
+}
+
+.carpentry-gallery{
+  background-image: url(../img/carpentry-main.jpg);
+  background-size: cover;
+  min-height: 450px;
+}
+
+.gallery:hover {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    );
+  content: "View Gallery";
+}
+
+.testimonial {
+  background-color: #141D19 !important;
+}
+
+.stats {
+  background-color: #ECEAE5 !important;
+}
+
+
+.whyus {
+  background-color: #6F6356 !important;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-off {
+  background-color: #fafafa
+}
+
+.bg-gal {
+  background-color: #bfa2a9;
+}
+
+p.lead.bright{
+  color: white;
+}
