@@ -30,8 +30,9 @@
   content: "View Gallery";
 }
 
-.testimonial {
-  background-color: #141D19 !important;
+
+.transparent {
+  background-color: transparent !important;
 }
 
 .stats {
@@ -61,7 +62,7 @@
 }
 
 .text-white {
-  color: #fff;
+  color: #fff !important;
 }
 
 .bg-off {

@@ -8064,6 +8064,17 @@ fieldset[disabled] .btn-danger-outline.active {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.block-transparent {
+  position: relative;
+  width: 100%;
+  padding: 60px 30px;
+  color: inherit;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 300px;
+}
 .block-overflow-hidden {
   overflow: hidden;
 }
@@ -8519,7 +8530,6 @@ fieldset[disabled] .navbar-transparent .btn-link:focus {
 }
 img[data-action="zoom"] {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
 }
 .zoom-img,
@@ -8531,7 +8541,6 @@ img[data-action="zoom"] {
 }
 img.zoom-img {
   cursor: pointer;
-  cursor: -webkit-zoom-out;
   cursor: -moz-zoom-out;
 }
 .zoom-overlay {
