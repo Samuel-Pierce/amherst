@@ -2620,9 +2620,11 @@
   // IMAGE GRID DATA-API
   // ===================
 
-  $(function () {
-    $('[data-grid="images"]').imageGrid()
-  })
+$(window).on("load", function() {
+    $(function () { $('[data-grid="images"]').imageGrid()})
+    alert("everything loaded")
+});
+
 
 
 }(jQuery);
